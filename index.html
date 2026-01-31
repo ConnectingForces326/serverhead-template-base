@@ -1,65 +1,200 @@
-ServerHead ☰ Menu
-Services FAQs Customer Reviews Contact us
-Call: (908) 555-1234
-24/7 Emergency service available at any time
+cat > index.html <<'EOF'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ServerHead - Bare Lifeline (Dummy)</title>
+  <meta name="description" content="24/7 Emergency Service - fast, simple, one-page lifeline site." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-Your 24/7 Emergency Experts
-Fast response. Clear pricing. Simple help — right now.
+<body>
+  <!-- Top bar / Nav (anchor links like plumber-nyc.com) -->
+  <header class="topbar" role="banner">
+    <a class="brand" href="#Top" aria-label="Go to top">
+      <span class="brand-dot"></span>
+      <span class="brand-text">ServerHead</span>
+    </a>
 
-Call now Request a callback
-Licensed & Insured
-Fast Response
-Upfront Pricing
-Our services
-Problem-first list (keep it simple).
+    <button class="nav-toggle" type="button" aria-controls="nav" aria-expanded="false">
+      ☰
+      <span class="sr-only">Menu</span>
+    </button>
 
-Emergency Repair
-Immediate help for urgent breakdowns — day or night.
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a class="nav-link" href="#Services">Services</a>
+      <a class="nav-link" href="#FAQs">FAQs</a>
+      <a class="nav-link" href="#Customer-Reviews">Customer Reviews</a>
+      <a class="nav-link" href="#Contact-us">Contact us</a>
+    </nav>
 
-Diagnostics
-We identify the issue first — no guessing, no pressure.
+    <a class="call-pill" href="tel:+19085551234" aria-label="Call now">
+      Call: (908) 555-1234
+    </a>
+  </header>
 
-Replacement / Install
-If it needs replacing, we’ll explain options clearly.
+  <!-- Hero / Above the fold -->
+  <main id="Top" class="page">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="kicker">24/7 Emergency service available at any time</p>
+        <h1 id="hero-title">Your 24/7 Emergency Experts</h1>
+        <p class="sub">
+          Fast response. Clear pricing. Simple help - right now.
+        </p>
 
-Maintenance
-Keep systems running smoothly and prevent emergencies.
+        <div class="hero-ctas">
+          <a class="btn primary" href="tel:+19085551234">Call now</a>
+          <a class="btn ghost" href="#Contact-us">Request a callback</a>
+        </div>
 
-Call for service
-FAQs
-Short answers only (lifeline mode).
+        <div class="trust-row" aria-label="Trust points">
+          <div class="trust-pill">Licensed &amp; Insured</div>
+          <div class="trust-pill">Fast Response</div>
+          <div class="trust-pill">Upfront Pricing</div>
+        </div>
+      </div>
+    </section>
 
-How fast can you respond?
-Do you offer free estimates?
-What areas do you serve?
-Customer Reviews
-A few high-impact testimonials.
+    <!-- Services -->
+    <section id="Services" class="section" aria-labelledby="services-title">
+      <div class="section-head">
+        <h2 id="services-title">Our services</h2>
+        <p class="muted">Problem-first list (keep it simple).</p>
+      </div>
 
-“Super fast response. Clear communication. Fixed it same visit.”
-— J. M., Clifton NJ
-“Professional, respectful, and the price was exactly what they said.”
-— K. R., Passaic NJ
-“Called late night and they actually picked up. Lifesaver.”
-— A. S., Paterson NJ
-Leave a message
-Contact us
-Phone-first. Form is optional but useful.
+      <div class="cards">
+        <article class="card">
+          <h3>Emergency Repair</h3>
+          <p>Immediate help for urgent breakdowns - day or night.</p>
+        </article>
+        <article class="card">
+          <h3>Diagnostics</h3>
+          <p>We identify the issue first - no guessing, no pressure.</p>
+        </article>
+        <article class="card">
+          <h3>Replacement / Install</h3>
+          <p>If it needs replacing, we'll explain options clearly.</p>
+        </article>
+        <article class="card">
+          <h3>Maintenance</h3>
+          <p>Keep systems running smoothly and prevent emergencies.</p>
+        </article>
+      </div>
 
-Call now
-(908) 555-1234
+      <div class="section-cta">
+        <a class="btn primary" href="tel:+19085551234">Call for service</a>
+      </div>
+    </section>
 
-24/7 emergency line
+    <!-- FAQs -->
+    <section id="FAQs" class="section" aria-labelledby="faqs-title">
+      <div class="section-head">
+        <h2 id="faqs-title">FAQs</h2>
+        <p class="muted">Short answers only (lifeline mode).</p>
+      </div>
 
-Name 
-Your name
- Phone 
-(###) ###-####
- What happened? 
-Quick summary…
- Request callback
-Dummy form for now (we’ll wire it later).
+      <div class="faq">
+        <details>
+          <summary>How fast can you respond?</summary>
+          <p>We prioritize emergencies and aim for the quickest possible arrival window.</p>
+        </details>
+        <details>
+          <summary>Do you offer free estimates?</summary>
+          <p>We provide clear pricing before work begins whenever possible.</p>
+        </details>
+        <details>
+          <summary>What areas do you serve?</summary>
+          <p>Passaic County + nearby NJ areas (customize per client).</p>
+        </details>
+      </div>
+    </section>
 
-© ServerHead Dummy — Skeleton #1 (Bare / Lifeline)
+    <!-- Customer Reviews -->
+    <section id="Customer-Reviews" class="section" aria-labelledby="reviews-title">
+      <div class="section-head">
+        <h2 id="reviews-title">Customer Reviews</h2>
+        <p class="muted">A few high-impact testimonials.</p>
+      </div>
 
-Back to top ↑
-Call Now
+      <div class="reviews">
+        <figure class="review">
+          <blockquote>
+            "Super fast response. Clear communication. Fixed it same visit."
+          </blockquote>
+          <figcaption>- J. M., Clifton NJ</figcaption>
+        </figure>
+
+        <figure class="review">
+          <blockquote>
+            "Professional, respectful, and the price was exactly what they said."
+          </blockquote>
+          <figcaption>- K. R., Passaic NJ</figcaption>
+        </figure>
+
+        <figure class="review">
+          <blockquote>
+            "Called late night and they actually picked up. Lifesaver."
+          </blockquote>
+          <figcaption>- A. S., Paterson NJ</figcaption>
+        </figure>
+      </div>
+
+      <div class="section-cta">
+        <a class="btn ghost" href="#Contact-us">Leave a message</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="Contact-us" class="section" aria-labelledby="contact-title">
+      <div class="section-head">
+        <h2 id="contact-title">Contact us</h2>
+        <p class="muted">Phone-first. Form is optional but useful.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Call now</h3>
+          <p class="big">
+            <a class="inline-link" href="tel:+19085551234">(908) 555-1234</a>
+          </p>
+          <p class="muted">24/7 emergency line</p>
+        </div>
+
+        <form class="form" action="#" method="post" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+          <label>
+            Phone
+            <input type="tel" name="phone" autocomplete="tel" placeholder="(###) ###-####" />
+          </label>
+          <label>
+            What happened?
+            <textarea name="message" rows="4" placeholder="Quick summary..."></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Request callback</button>
+          <p class="muted tiny">Dummy form for now (we'll wire it later).</p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> ServerHead Dummy - Skeleton #1 (Bare / Lifeline)</p>
+      <a class="to-top" href="#Top">Back to top ↑</a>
+    </footer>
+  </main>
+
+  <!-- Mobile sticky call button -->
+  <a class="sticky-call" href="tel:+19085551234" aria-label="Call now">
+    Call Now
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+EOF
